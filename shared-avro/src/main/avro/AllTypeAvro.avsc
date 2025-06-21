@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "AllTypeAvro",
+  "namespace": "ru.boraldan.producer.model",
+  "fields": [
+    { "name": "id", "type": { "type": "string", "logicalType": "uuid" } },
+    { "name": "name", "type": "string" },
+    { "name": "email", "type": "string" },
+    { "name": "age", "type": "int" },
+    { "name": "isActive", "type": "boolean" },
+    { "name": "balance", "type": "double" },
+    { "name": "rating", "type": "float" },
+    { "name": "createdAt", "type": { "type": "long", "logicalType": "timestamp-millis" } },
+    { "name": "attributes", "type": { "type": "map", "values": "string" } },
+    { "name": "scores", "type": { "type": "map", "values": "int" } },
+    { "name": "comments", "type": { "type": "array", "items": "string" } },
+
+    { "name": "status", "type": {
+      "type": "enum",
+      "name": "Status",
+      "symbols": ["ACTIVE", "INACTIVE", "BANNED"]
+    }}
+  ]
+}

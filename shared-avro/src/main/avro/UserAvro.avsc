@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "UserAvro",
+  "namespace": "ru.boraldan.producer.model",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "name", "type": ["null", "string"], "default": null},
+    {"name": "email", "type": "string"},
+    {"name": "title", "type": ["null", "string"], "default": null}
+  ]
+}
